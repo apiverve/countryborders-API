@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/countryborders",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Country Borders is a simple tool for getting the list of neighboring countries for a specific country. It returns the list of neighboring countries for the specified country.",
   "main": "index.js",
   "scripts": {
