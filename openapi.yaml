@@ -1,0 +1,74 @@
+openapi: 3.0.4
+info:
+  title: Country Borders
+  description: Country Borders is a simple tool for getting the list of neighboring countries for a specific country. It returns the list of neighboring countries for the specified country.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/countryborders:
+    get:
+      summary: Get Neighboring Countries
+      description: Country Borders is a simple tool for getting the list of neighboring countries for a specific country. It returns the list of neighboring countries for the specified country.
+      operationId: countryborders
+      parameters:
+      - name: country
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The Country 2 Letter ISO code (e.g., CA)
+        example: CA
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  country: Canada
+                  cca2: CA
+                  landlocked: false
+                  region: Americas
+                  subregion: Northern America
+                  coordinates:
+                    lat: 60
+                    lng: -95
+                  borders:
+                  - USA
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
