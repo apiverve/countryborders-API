@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/countryborders",
+  "version": "1.1.12",
+  "description": "Country Borders is a simple tool for getting the list of neighboring countries for a specific country. It returns the list of neighboring countries for the specified country.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/countryborders-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "country borders", "country borders api", "country borders tool", "country borders software", "country borders service"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/countryborders-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/countryborders?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
